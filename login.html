@@ -57,14 +57,14 @@
             <!--密码框-->
             <div class="layui-form-item ">
                 <i class="layui-icon layui-icon-password"></i>
-                <input type="password" name="password" required lay-verify="required" placeholder="请输入密码"
-                    autocomplete="off" class="layui-input">
+                <input type="password" name="password" required lay-verify="required|changdu" placeholder="请输入密码"
+                    autocomplete="off" class="layui-input pwd">
             </div>
             <!--确认密码框-->
             <div class="layui-form-item ">
                 <i class="layui-icon layui-icon-password"></i>
-                <input type="password" required lay-verify="required" placeholder="请再次输入密码" autocomplete="off"
-                    class="layui-input">
+                <input type="password" required lay-verify="required|changdu|same" placeholder="请再次输入密码"
+                    autocomplete="off" class="layui-input">
             </div>
             <!--提交按钮-->
             <div class="layui-form-item">
@@ -80,9 +80,8 @@
     </div>
 
 
-
-    <script src="/assets/lib/jquery.js"></script>
     <script src="/assets/lib/layui/layui.all.js"></script>
+    <script src="/assets/lib/jquery.js"></script>
     <script src="/assets/js/login.js"></script>
 </body>
 
