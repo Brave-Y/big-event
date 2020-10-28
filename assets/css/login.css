@@ -1,6 +1,8 @@
 body {
-    background: url('/assets/images/login_bg.jpg') no-repeat 0 0 / cover;
-    /* background-size: cover; */
+    background-image: url(/assets/images/login_bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+
 }
 
 #logo {
@@ -14,25 +16,32 @@ body {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    background-color: #fff;
+    background-color: white;
 }
 
-/* 默认让注册的盒子先隐藏 */
-.register {
-    display: none;
-}
-
-.login_title {
+.logo_title {
     height: 60px;
-    background: url('/assets/images/login_title.png') no-repeat center;
+    background-image: url(/assets/images/login_title.png);
+    background-repeat: no-repeat;
+    background-position: center;
 }
 
 .layui-form {
-    margin: 0 25px;
+    margin: 0 20px;
 }
 
 .layui-form a {
     float: right;
+    color: gray;
+    text-decoration: none;
+}
+
+.layui-form a:hover {
+    color: black;
+}
+
+.layui-input {
+    padding-left: 25px;
 }
 
 .layui-form-item {
@@ -44,7 +53,6 @@ body {
     left: 6px;
     top: 10px;
 }
-
-.layui-input {
-    padding-left: 25px;
+.register{
+    display: none;
 }
