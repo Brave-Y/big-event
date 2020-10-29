@@ -1,9 +1,11 @@
 //--------------切换盒子--------
 $('.login a').click(function () {
     $('.login').hide().next().show();
+    $('.login form')[0].reset()
 })
 $('.register a').click(function () {
     $('.login').show().next().hide();
+    $('.register form')[0].reset()
 })
 
 //----------注册----------
@@ -14,7 +16,7 @@ $('.register form').on('submit', function (e) {
     //ajax提交
     $.ajax({
         type: 'POST',
-        url: 'http://ajax.frontend.itheima.net/api/reguser',
+        url: '/api/reguser',
         data: data,
         success: function (res) {
             layer.msg(res.message)
@@ -41,7 +43,7 @@ $('.login form').on('submit', function (e) {
     e.preventDefault();
     $.ajax({
         type: 'POST',
-        url: 'http://ajax.frontend.itheima.net/api/login',
+        url: '/api/login',
         data: $(this).serialize(),
         success: function (res) {
             layer.msg(res.message)

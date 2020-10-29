@@ -1,10 +1,7 @@
 //获取用户信息我函数
 function renderUser() {
     $.ajax({
-        url: 'http://ajax.frontend.itheima.net/my/userinfo',
-        headers: {
-            Authorization: localStorage.getItem('token')
-        },
+        url: '/my/userinfo',
         success: function (res) {
             console.log(res);
             if (res.status === 0) {
@@ -22,12 +19,9 @@ function renderUser() {
                     console.log(8)
                 }
             }
-        }
-
-
+        },
     })
 }
-
 renderUser();
 
 
