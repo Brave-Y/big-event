@@ -24,11 +24,7 @@ $('#file').on('change', function () {
     let fileObj = this.files[0];
     // 2. 为文件对象生成一个临时的url
     let url = URL.createObjectURL(fileObj);
-    // console.log(url);
     // 销毁剪裁区  --->  更换剪裁区的图片  --->  重建剪裁区
-    // $image.cropper('destroy');
-    // $image.attr('src', url);
-    // $image.cropper(options);
     $image.cropper('destroy').attr('src', url).cropper(options);
 });
 
