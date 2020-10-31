@@ -1,0 +1,157 @@
+* {
+    margin: 0 0;
+    padding: 0 0;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    position: relative;
+    background-color: rgb(204, 204, 204);
+}
+
+.box {
+    position: absolute;
+    height: 100px;
+    width: 200px;
+    z-index: 3;
+}
+
+.box1 {
+    bottom: 100px;
+    left: -300px;
+    animation: dong 2s linear 1s infinite;
+
+}
+
+.box11 {
+    position: absolute;
+    left: 120px;
+    bottom: 90px;
+    height: 80px;
+    width: 140px;
+    text-align: center;
+    border: 2px solid gray;
+    border-radius: 15px;
+
+}
+
+.box11 p {
+    font-family: 楷体;
+    font-weight: 700;
+    margin-top: 12px;
+    color: orange;
+    font-size: 20px;
+}
+
+.box11::after {
+    content: "";
+    position: absolute;
+    left: 10px;
+    bottom: -20px;
+    height: 0;
+    width: 0;
+    border-width: 10px;
+    border-style: solid;
+    border-color: gray transparent transparent transparent;
+}
+
+.box1 .bear1 {
+    transform: scale(.5);
+}
+
+.box2 {
+    bottom: 50px;
+    left: -200px;
+    animation: dong 4s linear 1s infinite;
+}
+
+.box3 {
+    bottom: 0;
+    left: 0px;
+    animation: dong 4s linear infinite;
+}
+
+
+.bear1 {
+    height: 100px;
+    width: 200px;
+    background: url(/imgs/bear.png) no-repeat;
+    animation: pao 0.3s steps(8) infinite;
+}
+
+
+
+@keyframes pao {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -1600px 0px;
+    }
+}
+
+@keyframes dong {
+    0% {
+        left: 0;
+        transform: translateX(-100%);
+    }
+
+    100% {
+        left: 100%;
+        transform: translateX(0);
+    }
+}
+
+@keyframes bj1 {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -3840px;
+    }
+}
+
+@keyframes bj2 {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: -3840px;
+    }
+}
+
+.bj1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 336px;
+    width: 100%;
+    background: url(/imgs/bg1.png);
+    animation: bj1 15s linear infinite;
+    z-index: 2;
+}
+
+.bj2 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 569px;
+    width: 100%;
+    background: url(/imgs/bg2.png);
+    animation: bj1 18s linear infinite;
+    z-index: 1;
+}
+
+.box:hover {
+    animation-play-state: paused;
+    cursor: pointer;
+}

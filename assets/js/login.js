@@ -27,6 +27,7 @@ $('.register form').on('submit', function (e) {
         }
     })
 })
+
 //---------------验证规则---------
 let form = layui.form;
 form.verify({

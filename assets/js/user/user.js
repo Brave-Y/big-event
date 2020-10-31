@@ -3,9 +3,9 @@ function renderForm() {
     $.ajax({
         url: '/my/userinfo',
         success: function (res) {
-            console.log(res)
+
             form.val('abc', res.data)
-            console.log(123)
+
         }
     })
 }
@@ -21,7 +21,6 @@ $('form').on('submit', function (e) {
             layer.msg(res.message)
             if (res.status === 0) {
                 window.parent.renderUser();
-                console.log(666)
             }
         }
     })
